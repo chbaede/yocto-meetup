@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Yocto Project Meetup Korea</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Yocto Project Meetup Korea - 한국 임베디드 리눅스 및 Yocto Project 개발자 커뮤니티 밋업" />
+  <meta name="keywords" content="Yocto, Yocto Project, Embedded Linux, Meetup, Korea, 오픈소스, OpenUP, Open Source, Linux Foundation" />
+  <meta property="og:title" content="Yocto Project Meetup Korea" />
+  <meta property="og:description" content="한국 Yocto Project 개발자들을 위한 기술 공유 및 네트워킹 밋업" />
+  <meta property="og:image" content="https://meetup.yocto.co.kr/banner.png" />
+  <meta property="og:url" content="https://meetup.yocto.co.kr/" />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://meetup.yocto.co.kr/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%230f172a'/><text y='68' x='24' font-size='56' font-family='monospace' font-weight='700' fill='%2338bdf8'>Y</text></svg>" />
+
+  <!-- Fonts: JetBrains Mono & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Pretendard', 'Inter', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'Fira Code', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Developer subtle grid background */
+    .dev-grid {
+      background-size: 24px 24px;
+      background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+    }
+    /* Safe area for mobile viewport */
+    .safe-top {
+      padding-top: max(env(safe-area-inset-top), 0.5rem);
+    }
+  </style>
+</head>
+<body class="bg-white text-slate-800 font-sans antialiased min-h-screen flex flex-col selection:bg-slate-900 selection:text-white">
+
+  <!-- Status Alert (Terminal badge style) -->
+  <div class="border-b border-slate-200 bg-slate-50/80 px-4 py-2 safe-top text-xs text-slate-600">
+    <div class="max-w-3xl mx-auto flex items-center justify-between gap-3 font-mono">
+      <div class="flex items-center gap-2 truncate">
+        <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[11px] font-semibold bg-amber-100 text-amber-800 border border-amber-300">
+          WIP
+        </span>
+        <span class="truncate text-[11px] sm:text-xs" data-i18n="top_bar_msg">
+          일정 및 장소 세부 조율 중 (준비 중인 행사입니다)
+        </span>
+      </div>
+      <div class="shrink-0 flex items-center gap-1.5 text-[11px]">
+        <button id="lang-ko" onclick="setLanguage('ko')" class="font-bold text-slate-900 underline underline-offset-4 decoration-2 decoration-slate-900 px-1 py-0.5">KO</button>
+        <span class="text-slate-300">/</span>
+        <button id="lang-en" onclick="setLanguage('en')" class="text-slate-500 hover:text-slate-900 px-1 py-0.5">EN</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="border-b border-slate-200 bg-white/90 backdrop-blur sticky top-0 z-30">
+    <div class="max-w-3xl mx-auto px-4 h-14 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="font-mono text-sm font-semibold tracking-tight text-slate-900">
+          yocto-meetup<span class="text-slate-400">/</span>korea
+        </span>
+      </div>
+      <div class="flex items-center gap-4 text-xs font-mono">
+        <a href="#schedule" class="text-slate-600 hover:text-slate-900" data-i18n="nav_schedule">schedule</a>
+        <a href="#sponsors" class="text-slate-600 hover:text-slate-900" data-i18n="nav_sponsors">sponsors</a>
+        <a href="https://github.com/chbaede/yocto-meetup" target="_blank" rel="noopener noreferrer" class="text-slate-900 hover:text-blue-600 font-semibold flex items-center gap-1">
+          <span>github</span>
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow dev-grid">
+    <div class="max-w-3xl mx-auto px-4 py-6 sm:py-8 space-y-8">
+
+      <!-- Banner Container -->
+      <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-100 shadow-xs">
+        <img 
+          src="banner.png?v=2" 
+          alt="Yocto Project Meetup Korea Banner" 
+          class="w-full h-auto object-cover max-h-[340px] block"
+        />
+      </div>
+
+      <!-- Intro Title & Summary -->
+      <div>
+        <div class="flex items-center gap-2 mb-2 font-mono text-xs text-slate-500">
+          <span>// COMMUNITY MEETUP</span>
+          <span>•</span>
+          <span class="text-emerald-600 font-semibold">STATUS: PLANNING</span>
+        </div>
+        <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 mb-3">
+          Yocto Project Meetup Korea
+        </h1>
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed" data-i18n="hero_desc">
+          한국 임베디드 리눅스 및 Yocto Project 엔지니어들이 모여 실제 프로젝트 경험, 빌드 최적화, 최신 기능 및 아키텍처 노하우를 공유하고 자유롭게 소통하는 오프라인 밋업입니다.
+        </p>
+      </div>
+
+      <!-- Overview: Minimal Key-Value Spec Block -->
+      <div class="border border-slate-200 rounded-lg p-4 bg-white/80 font-mono text-xs divide-y divide-slate-100">
+        <div class="py-2 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+          <span class="text-slate-500 uppercase tracking-wider" data-i18n="lbl_date">Date &amp; Time</span>
+          <span class="text-slate-900 font-semibold" data-i18n="val_date">2026-12-05 (Sat) Afternoon [TBD]</span>
+        </div>
+        <div class="py-2 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+          <span class="text-slate-500 uppercase tracking-wider" data-i18n="lbl_venue">Venue</span>
+          <span class="text-slate-900 font-semibold" data-i18n="val_venue">OpenUP (Seoul) [Preparing]</span>
+        </div>
+        <div class="py-2 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+          <span class="text-slate-500 uppercase tracking-wider" data-i18n="lbl_capacity">Capacity</span>
+          <span class="text-slate-900" data-i18n="val_capacity">~50 attendees (Free, Registration required)</span>
+        </div>
+        <div class="py-2 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+          <span class="text-slate-500 uppercase tracking-wider" data-i18n="lbl_format">Format</span>
+          <span class="text-slate-900" data-i18n="val_format">4 Talks (20m + 10m Q&amp;A) + 1h Networking</span>
+        </div>
+      </div>
+
+      <!-- Registration Box -->
+      <div class="border border-slate-200 rounded-lg p-4 bg-slate-50 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div>
+          <div class="text-xs font-bold text-slate-900 mb-0.5" data-i18n="reg_title">참가 신청 (Registration)</div>
+          <div class="text-xs text-slate-500 font-mono" data-i18n="reg_desc">Google Forms 오픈 예정 (선착순 50명, 무료)</div>
+        </div>
+        <button id="google-form-btn" disabled class="px-3.5 py-2 rounded border border-slate-200 bg-white text-slate-400 font-mono text-xs cursor-not-allowed text-center shrink-0">
+          <span data-i18n="reg_btn">forms.gle [WIP]</span>
+        </button>
+      </div>
+
+      <!-- Schedule Table -->
+      <section id="schedule" class="space-y-3">
+        <div class="flex items-center justify-between">
+          <h2 class="text-sm font-bold uppercase tracking-wider text-slate-900 font-mono flex items-center gap-2">
+            <span>#</span> <span data-i18n="sec_schedule">Sessions</span>
+          </h2>
+          <span class="text-xs font-mono text-slate-400">20m talk + 10m Q&amp;A</span>
+        </div>
+
+        <div class="border border-slate-200 rounded-lg overflow-hidden bg-white">
+          <table class="w-full text-left border-collapse text-xs">
+            <thead>
+              <tr class="border-b border-slate-200 bg-slate-50/70 font-mono text-slate-500">
+                <th class="py-2.5 px-3 sm:px-4 w-16">Slot</th>
+                <th class="py-2.5 px-3 sm:px-4" data-i18n="th_speaker">Speaker</th>
+                <th class="py-2.5 px-3 sm:px-4" data-i18n="th_topic">Topic</th>
+                <th class="py-2.5 px-3 sm:px-4 w-24 text-right font-mono" data-i18n="th_time">Time</th>
+              </tr>
+            </thead>
+            <tbody id="session-tbody" class="divide-y divide-slate-100 font-mono">
+              <!-- Dynamically populated from meetups.js -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Sponsors Block -->
+      <section id="sponsors" class="space-y-3 pt-2">
+        <div class="flex items-center justify-between">
+          <h2 class="text-sm font-bold uppercase tracking-wider text-slate-900 font-mono flex items-center gap-2">
+            <span>#</span> <span data-i18n="sec_sponsors">Sponsors</span>
+          </h2>
+          <a href="mailto:sponsor@yoctoproject-korea.org?subject=[Yocto Meetup] Sponsorship Inquiry" class="text-xs font-mono text-slate-600 hover:text-slate-900 underline" data-i18n="sponsor_contact">
+            inquire &rarr;
+          </a>
+        </div>
+
+        <div class="border border-slate-200 rounded-lg p-4 bg-white space-y-3">
+          <p class="text-xs text-slate-500" data-i18n="sponsor_desc">
+            행사 운영 및 다과, 장소 지원을 후원해주실 스폰서를 모집하고 있습니다.
+          </p>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-xs font-mono">
+            <div class="p-3 rounded border border-dashed border-slate-200 bg-slate-50 text-slate-400">
+              [Sponsor Slot]
+            </div>
+            <div class="p-3 rounded border border-dashed border-slate-200 bg-slate-50 text-slate-400">
+              [Sponsor Slot]
+            </div>
+            <div class="p-3 rounded border border-dashed border-slate-200 bg-slate-50 text-slate-400">
+              [Sponsor Slot]
+            </div>
+            <div class="p-3 rounded border border-dashed border-slate-200 bg-slate-50 text-slate-500">
+              OpenUP <span class="text-[10px] text-slate-400 block">[Venue Partner]</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Minimal Footer -->
+  <footer class="border-t border-slate-200 bg-white py-6 text-xs text-slate-400 font-mono">
+    <div class="max-w-3xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div>yocto-meetup-korea &copy; 2026</div>
+      <div class="flex items-center gap-3">
+        <a href="https://github.com/chbaede/yocto-meetup" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 underline">source</a>
+        <span>•</span>
+        <a href="https://www.yoctoproject.org/" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 underline">yoctoproject.org</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data/meetups.js"></script>
+  <script>
+    let currentLang = 'ko';
+
+    const translations = {
+      ko: {
+        top_bar_msg: "일정 및 장소 세부 조율 중 (준비 중인 행사입니다)",
+        nav_schedule: "세션 일정",
+        nav_sponsors: "스폰서",
+        hero_desc: "한국 임베디드 리눅스 및 Yocto Project 엔지니어들이 모여 실제 프로젝트 경험, 빌드 최적화, 최신 기능 및 아키텍처 노하우를 공유하고 자유롭게 소통하는 오프라인 밋업입니다.",
+        lbl_date: "일시",
+        val_date: "2026년 12월 5일 (토) 오후 [잠정/확정 전]",
+        lbl_venue: "장소",
+        val_venue: "OpenUP (오픈UP 소프트웨어센터, 서울) [협의 중]",
+        lbl_capacity: "규모",
+        val_capacity: "약 50명 (무료 / 사전 등록제)",
+        lbl_format: "구성",
+        val_format: "발표 4세션 (각 20분+10분 Q&A) + 네트워킹 1시간",
+        reg_title: "참가 신청 안내",
+        reg_desc: "Google Forms 사전 신청 오픈 예정 (선착순 50명, 무료)",
+        reg_btn: "신청 폼 준비 중",
+        sec_schedule: "발표 세션",
+        th_speaker: "발표자 / 소속",
+        th_topic: "주제",
+        th_time: "시간",
+        topic_tbd: "주제 조율 중 (TBA)",
+        social_name: "오픈 네트워킹 & 교류",
+        social_org: "참석자 전체",
+        social_desc: "간단한 다과와 함께 자유 기술 교류",
+        sec_sponsors: "스폰서 & 파트너",
+        sponsor_desc: "행사 운영 및 다과 지원, 커뮤니티 활성화를 후원해주실 스폰서를 모집하고 있습니다.",
+        sponsor_contact: "스폰서 문의 메일 →"
+      },
+      en: {
+        top_bar_msg: "Date & venue are tentative and in planning",
+        nav_schedule: "schedule",
+        nav_sponsors: "sponsors",
+        hero_desc: "An in-person meetup for Korean embedded Linux and Yocto Project engineers to share production experience, build optimization, and connect with peers.",
+        lbl_date: "Date & Time",
+        val_date: "Saturday, December 5, 2026 (Afternoon) [Tentative]",
+        lbl_venue: "Venue",
+        val_venue: "OpenUP Software Center, Seoul [Preparing]",
+        lbl_capacity: "Capacity",
+        val_capacity: "~50 attendees (Free, Registration required)",
+        lbl_format: "Format",
+        val_format: "4 Talks (20m + 10m Q&A) + 1h Networking",
+        reg_title: "Registration",
+        reg_desc: "Google Forms opening soon (First-come, 50 seats, Free)",
+        reg_btn: "Form WIP",
+        sec_schedule: "Sessions",
+        th_speaker: "Speaker",
+        th_topic: "Topic",
+        th_time: "Time",
+        topic_tbd: "Topic to be announced",
+        social_name: "Open Networking & Social Mixer",
+        social_org: "All Attendees",
+        social_desc: "Technical discussion with refreshments",
+        sec_sponsors: "Sponsors & Partners",
+        sponsor_desc: "We welcome corporate and community sponsors to support this developer meetup.",
+        sponsor_contact: "contact sponsorship →"
+      }
+    };
+
+    function renderSessions(lang) {
+      const edition = window.MEETUPS_DATA ? window.MEETUPS_DATA[0] : null;
+      if (!edition) return;
+
+      const tbody = document.getElementById('session-tbody');
+      let html = '';
+
+      edition.sessions.forEach(s => {
+        const speakerName = s.speaker[lang];
+        const orgName = s.org[lang];
+        const topicText = translations[lang].topic_tbd;
+
+        html += `
+          <tr class="hover:bg-slate-50 transition-colors">
+            <td class="py-2.5 px-3 sm:px-4 text-slate-500 font-semibold">${s.type}</td>
+            <td class="py-2.5 px-3 sm:px-4">
+              <div class="font-sans font-semibold text-slate-900">${speakerName}</div>
+              <div class="text-[11px] text-slate-500 font-sans">${orgName}</div>
+            </td>
+            <td class="py-2.5 px-3 sm:px-4 text-slate-500 text-[11px]">
+              ${topicText}
+            </td>
+            <td class="py-2.5 px-3 sm:px-4 text-right text-slate-400 text-[11px] whitespace-nowrap">
+              ${s.duration}
+            </td>
+          </tr>
+        `;
+      });
+
+      // Social Mixer
+      const socialName = translations[lang].social_name;
+      const socialOrg = translations[lang].social_org;
+      const socialDesc = translations[lang].social_desc;
+
+      html += `
+        <tr class="bg-slate-50/60">
+          <td class="py-2.5 px-3 sm:px-4 text-slate-700 font-semibold">Social</td>
+          <td class="py-2.5 px-3 sm:px-4">
+            <div class="font-sans font-semibold text-slate-900">${socialName}</div>
+            <div class="text-[11px] text-slate-500 font-sans">${socialOrg}</div>
+          </td>
+          <td class="py-2.5 px-3 sm:px-4 text-slate-500 text-[11px]">
+            ${socialDesc}
+          </td>
+          <td class="py-2.5 px-3 sm:px-4 text-right text-slate-700 font-semibold text-[11px] whitespace-nowrap">
+            ~60m
+          </td>
+        </tr>
+      `;
+
+      tbody.innerHTML = html;
+
+      // Google Forms Link Activation
+      const formBtn = document.getElementById('google-form-btn');
+      if (edition.registrationFormUrl) {
+        formBtn.removeAttribute('disabled');
+        formBtn.className = "px-3.5 py-2 rounded bg-slate-900 hover:bg-slate-800 text-white font-mono text-xs cursor-pointer text-center shrink-0 transition-colors";
+        formBtn.onclick = () => window.open(edition.registrationFormUrl, '_blank');
+        formBtn.innerText = lang === 'ko' ? "신청 폼 열기 →" : "Open Google Form →";
+      }
+    }
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      const data = translations[lang];
+      if (!data) return;
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (data[key]) {
+          el.innerText = data[key];
+        }
+      });
+
+      const koBtn = document.getElementById('lang-ko');
+      const enBtn = document.getElementById('lang-en');
+      if (lang === 'ko') {
+        koBtn.className = "font-bold text-slate-900 underline underline-offset-4 decoration-2 decoration-slate-900 px-1 py-0.5";
+        enBtn.className = "text-slate-500 hover:text-slate-900 px-1 py-0.5";
+        document.documentElement.lang = "ko";
+      } else {
+        enBtn.className = "font-bold text-slate-900 underline underline-offset-4 decoration-2 decoration-slate-900 px-1 py-0.5";
+        koBtn.className = "text-slate-500 hover:text-slate-900 px-1 py-0.5";
+        document.documentElement.lang = "en";
+      }
+
+      renderSessions(lang);
+      localStorage.setItem('yocto_meetup_lang', lang);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('yocto_meetup_lang') || 'ko';
+      setLanguage(savedLang);
+    });
+  </script>
+</body>
+</html>
