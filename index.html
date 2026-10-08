@@ -97,9 +97,9 @@
 
       <!-- Event Overview (Clean Spec Sheet) -->
       <section id="overview" class="space-y-3">
-        <h2 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
-          <span class="text-sky-600">#</span>
-          <span data-i18n="sec_overview">행사 개요 (Overview)</span>
+        <h2 class="text-base sm:text-lg font-bold text-slate-900 flex items-center gap-2">
+          <span class="w-1.5 h-4 rounded-full bg-sky-500 inline-block"></span>
+          <span data-i18n="sec_overview">행사 개요</span>
         </h2>
 
         <div class="border border-slate-200 rounded-xl bg-slate-50/50 p-4 divide-y divide-slate-200/80 text-sm">
@@ -160,9 +160,9 @@
       <!-- Schedule Table -->
       <section id="schedule" class="space-y-3">
         <div class="flex items-center justify-between">
-          <h2 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
-            <span class="text-sky-600">#</span>
-            <span data-i18n="sec_schedule">발표 세션 및 일정 (Schedule)</span>
+          <h2 class="text-base sm:text-lg font-bold text-slate-900 flex items-center gap-2">
+            <span class="w-1.5 h-4 rounded-full bg-sky-500 inline-block"></span>
+            <span data-i18n="sec_schedule">발표 세션 및 일정</span>
           </h2>
           <span class="text-xs font-mono text-slate-500">20m talk + 10m Q&amp;A</span>
         </div>
@@ -187,9 +187,9 @@
       <!-- Sponsors Section -->
       <section id="sponsors" class="space-y-3">
         <div class="flex items-center justify-between">
-          <h2 class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
-            <span class="text-sky-600">#</span>
-            <span data-i18n="sec_sponsors">스폰서 &amp; 파트너 (Sponsors)</span>
+          <h2 class="text-base sm:text-lg font-bold text-slate-900 flex items-center gap-2">
+            <span class="w-1.5 h-4 rounded-full bg-sky-500 inline-block"></span>
+            <span data-i18n="sec_sponsors">스폰서 &amp; 파트너</span>
           </h2>
           <span class="text-xs text-slate-500" data-i18n="sponsor_status_tag">스폰서 모집 중</span>
         </div>
@@ -201,15 +201,13 @@
 
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 items-stretch">
             
-            <!-- OpenUP Partner Slot with Official Logo & Link -->
-            <a href="https://www.oss.kr/pages/5" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl border border-slate-200 bg-slate-50/60 hover:bg-slate-50 hover:border-slate-300 transition-all flex flex-col items-center justify-center text-center group">
+            <!-- OpenUP Slot with Official Logo & Direct Link -->
+            <a href="https://www.oss.kr/pages/5" target="_blank" rel="noopener noreferrer" class="p-4 rounded-xl border border-slate-200 bg-slate-50/70 hover:bg-slate-100/80 hover:border-slate-300 transition-all flex flex-col items-center justify-center text-center group" title="OpenUP (오픈소스 소프트웨어 통합지원센터)">
               <img 
                 src="assets/openup_logo_web.png" 
-                alt="OpenUP 오픈소스 소프트웨어 통합지원센터" 
-                class="h-8 w-auto object-contain mb-2 group-hover:scale-105 transition-transform"
+                alt="OpenUP 로고" 
+                class="h-9 w-auto object-contain group-hover:scale-105 transition-transform"
               />
-              <span class="text-xs font-bold text-slate-800">OpenUP</span>
-              <span class="text-[11px] text-slate-500 mt-0.5" data-i18n="tag_venue_partner">장소 협의 파트너</span>
             </a>
 
             <!-- Sponsor Slots -->
@@ -258,7 +256,7 @@
         nav_schedule: "세션",
         nav_sponsors: "스폰서",
         hero_desc: "한국 임베디드 리눅스 및 Yocto Project 엔지니어들이 모여 실제 프로젝트 경험, 빌드 최적화, 최신 기능 및 아키텍처 노하우를 공유하고 자유롭게 소통하는 오프라인 밋업입니다.",
-        sec_overview: "행사 개요 (Overview)",
+        sec_overview: "행사 개요",
         lbl_date: "일시 (Date & Time)",
         val_date: "2026년 12월 5일 (토) 오후",
         tag_tbd: "잠정 예정",
@@ -272,7 +270,7 @@
         reg_title: "참가 신청 등록 (Registration)",
         reg_desc: "세부 일정 확정 후 Google Forms를 통해 선착순 50명 사전 등록이 진행됩니다.",
         reg_btn: "forms.gle [오픈 준비 중]",
-        sec_schedule: "발표 세션 및 일정 (Schedule)",
+        sec_schedule: "발표 세션 및 일정",
         th_speaker: "발표자 / 소속",
         th_topic: "주제 (Topic)",
         th_time: "진행 시간",
@@ -280,17 +278,13 @@
         social_name: "오픈 네트워킹 & 자유 교류",
         social_org: "참석자 전체",
         social_desc: "다과 및 음료와 함께 참석자 간 자유로운 기술 교류 및 네트워킹 진행",
-        sec_sponsors: "스폰서 & 파트너 (Sponsors)",
+        sec_sponsors: "스폰서 & 파트너",
         sponsor_status_tag: "스폰서 모집 중",
         sponsor_desc: "Yocto Project Meetup Korea의 원활한 운영 및 국내 임베디드 오픈소스 개발자 커뮤니티 활성화를 후원해주실 기업 및 기관 스폰서를 모시고 있습니다.",
-        tag_venue_partner: "장소 협의 파트너",
         slot_sponsor: "스폰서 슬롯"
       },
       en: {
         top_bar_msg: "Date & venue are in planning (Under preparation)",
-        nav_overview: "Overview",
-        nav_schedule: "Schedule",
-        nav_sponsors: "Sponsors",
         hero_desc: "An in-person meetup for Korean embedded Linux and Yocto Project engineers to share production experience, build optimization, and connect with peers.",
         sec_overview: "Event Overview",
         lbl_date: "Date & Time",
@@ -317,7 +311,6 @@
         sec_sponsors: "Sponsors & Partners",
         sponsor_status_tag: "Sponsors Welcome",
         sponsor_desc: "We welcome corporate and community sponsors to support this open-source developer meetup.",
-        tag_venue_partner: "Venue Partner",
         slot_sponsor: "Sponsor Slot"
       }
     };
