@@ -23,13 +23,13 @@
 
 각 세션은 **20분 발표 + 10분 질의응답(Q&A)** 으로 진행되며, 발표 종료 후 **1시간 동안 자유로운 오픈 네트워킹**이 진행됩니다.
 
-| 구분 | 발표자 (Speaker) | 소속 (Affiliation) | 발표 주제 (Topic) | 시간 |
-| :---: | :--- | :--- | :--- | :---: |
-| **Talk 1** | **배창혁** (Changhyeok Bae) | Mercedes-Benz Innovation Lab | *주제 조율 중 (TBA)* | 20m + 10m Q&A |
-| **Talk 2** | **손현수** (Hyunsu Son) | LG전자 (LG Electronics) | *주제 조율 중 (TBA)* | 20m + 10m Q&A |
-| **Talk 3** | **양동현** (Donghyun Yang) | LG전자 (LG Electronics) | *주제 조율 중 (TBA)* | 20m + 10m Q&A |
-| **Talk 4** | **모우진** (Woojin Moh) | 텔레칩스 (Telechips) | *주제 조율 중 (TBA)* | 20m + 10m Q&A |
-| **Social** | **오픈 네트워킹 & 교류** | 모든 참석자 | 다과/음료 및 자유 기술 교류 | ~60분 |
+| 발표자 (Speaker) / 소속 (Affiliation) | 주제 (Topic) |
+| :--- | :---: |
+| **배창혁** (Changhyeok Bae) &middot; Mercedes-Benz Innovation Lab | `TBD` |
+| **손현수** (Hyunsu Son) &middot; LG전자 (LG Electronics) | `TBD` |
+| **양동현** (Donghyun Yang) &middot; LG전자 (LG Electronics) | `TBD` |
+| **모우진** (Woojin Moh) &middot; 텔레칩스 (Telechips) | `TBD` |
+| **오픈 네트워킹 & 교류** (Social Mixer) &middot; 참석자 전체 | `1h` |
 
 ---
 

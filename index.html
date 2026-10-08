@@ -168,13 +168,11 @@
         </div>
 
         <div class="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-xs">
-          <table class="w-full text-left border-collapse text-xs sm:text-sm">
+          <table class="w-full text-left border-collapse text-xs sm:text-sm table-fixed">
             <thead>
               <tr class="border-b border-slate-200 bg-slate-50 font-mono text-xs text-slate-500">
-                <th class="py-3 px-3 sm:px-4 w-16">Slot</th>
-                <th class="py-3 px-3 sm:px-4" data-i18n="th_speaker">발표자 / 소속</th>
-                <th class="py-3 px-3 sm:px-4" data-i18n="th_topic">주제 (Topic)</th>
-                <th class="py-3 px-3 sm:px-4 w-28 text-right font-mono" data-i18n="th_time">진행 시간</th>
+                <th class="py-2.5 px-3 sm:px-4 w-3/5 sm:w-2/3" data-i18n="th_speaker">발표자 / 소속</th>
+                <th class="py-2.5 px-3 sm:px-4 w-2/5 sm:w-1/3 text-right" data-i18n="th_topic">주제</th>
               </tr>
             </thead>
             <tbody id="session-tbody" class="divide-y divide-slate-100">
@@ -325,22 +323,15 @@
       edition.sessions.forEach(s => {
         const speakerName = s.speaker[lang];
         const orgName = s.org[lang];
-        const topicText = translations[lang].topic_tbd;
 
         html += `
           <tr class="hover:bg-slate-50 transition-colors">
-            <td class="py-3 px-3 sm:px-4 font-mono text-xs font-semibold text-sky-700">
-              <span class="px-1.5 py-0.5 rounded bg-sky-50 border border-sky-100">${s.type}</span>
+            <td class="py-2.5 px-3 sm:px-4">
+              <div class="font-bold text-slate-900 text-xs sm:text-sm truncate">${speakerName}</div>
+              <div class="text-[11px] text-slate-500 truncate">${orgName}</div>
             </td>
-            <td class="py-3 px-3 sm:px-4">
-              <div class="font-bold text-slate-900">${speakerName}</div>
-              <div class="text-xs text-slate-500">${orgName}</div>
-            </td>
-            <td class="py-3 px-3 sm:px-4 text-xs text-slate-500 font-mono">
-              <span class="inline-block px-2 py-0.5 rounded bg-slate-100 text-slate-600">${topicText}</span>
-            </td>
-            <td class="py-3 px-3 sm:px-4 text-right font-mono text-xs text-slate-500 whitespace-nowrap">
-              ${s.duration}
+            <td class="py-2.5 px-3 sm:px-4 text-right">
+              <span class="inline-block px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-100 text-slate-600 border border-slate-200">TBD</span>
             </td>
           </tr>
         `;
@@ -349,22 +340,15 @@
       // Social Mixer
       const socialName = translations[lang].social_name;
       const socialOrg = translations[lang].social_org;
-      const socialDesc = translations[lang].social_desc;
 
       html += `
         <tr class="bg-indigo-50/40">
-          <td class="py-3 px-3 sm:px-4 font-mono text-xs font-semibold text-indigo-700">
-            <span class="px-1.5 py-0.5 rounded bg-indigo-100 border border-indigo-200">Social</span>
+          <td class="py-2.5 px-3 sm:px-4">
+            <div class="font-bold text-indigo-950 text-xs sm:text-sm truncate">${socialName}</div>
+            <div class="text-[11px] text-indigo-700 truncate">${socialOrg}</div>
           </td>
-          <td class="py-3 px-3 sm:px-4">
-            <div class="font-bold text-indigo-950">${socialName}</div>
-            <div class="text-xs text-indigo-700">${socialOrg}</div>
-          </td>
-          <td class="py-3 px-3 sm:px-4 text-xs text-indigo-900">
-            ${socialDesc}
-          </td>
-          <td class="py-3 px-3 sm:px-4 text-right font-mono text-xs font-semibold text-indigo-800 whitespace-nowrap">
-            ~60m
+          <td class="py-2.5 px-3 sm:px-4 text-right">
+            <span class="inline-block px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-indigo-100 text-indigo-700 border border-indigo-200">1h</span>
           </td>
         </tr>
       `;
