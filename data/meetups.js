@@ -89,8 +89,8 @@ window.MEETUPS_DATA = [
           en: "Woojin Moh"
         },
         org: {
-          ko: "오픈소스 커뮤니티",
-          en: "Open Source Community"
+          ko: "텔레칩스 (Telechips)",
+          en: "Telechips"
         },
         topic: {
           ko: "주제 조율 중 (To be announced)",

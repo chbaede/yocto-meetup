@@ -28,7 +28,7 @@
 | **Talk 1** | **배창혁** (Changhyeok Bae) | Mercedes-Benz Innovation Lab | *주제 조율 중 (TBA)* | 20m + 10m Q&A |
 | **Talk 2** | **손현수** (Hyunsu Son) | LG전자 (LG Electronics) | *주제 조율 중 (TBA)* | 20m + 10m Q&A |
 | **Talk 3** | **양동현** (Donghyun Yang) | LG전자 (LG Electronics) | *주제 조율 중 (TBA)* | 20m + 10m Q&A |
-| **Talk 4** | **모우진** (Woojin Moh) | 오픈소스 커뮤니티 | *주제 조율 중 (TBA)* | 20m + 10m Q&A |
+| **Talk 4** | **모우진** (Woojin Moh) | 텔레칩스 (Telechips) | *주제 조율 중 (TBA)* | 20m + 10m Q&A |
 | **Social** | **오픈 네트워킹 & 교류** | 모든 참석자 | 다과/음료 및 자유 기술 교류 | ~60분 |
 
 ---
