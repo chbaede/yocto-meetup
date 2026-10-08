@@ -47,18 +47,18 @@
 </head>
 <body class="bg-white text-slate-800 font-sans antialiased min-h-screen flex flex-col selection:bg-slate-900 selection:text-white">
 
-  <!-- Top Bar with Status, Language Switcher, and GitHub -->
-  <div class="border-b border-slate-200 bg-slate-50/90 px-4 py-2.5 safe-top text-xs text-slate-700">
-    <div class="max-w-3xl mx-auto flex items-center justify-between gap-3">
-      <div class="flex items-center gap-2 truncate">
-        <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[11px] font-bold bg-amber-100 text-amber-800 border border-amber-300 font-mono">
+  <!-- Top Bar: Single clean line on all devices -->
+  <div class="border-b border-slate-200 bg-slate-50/95 px-3 sm:px-4 py-2 safe-top text-xs text-slate-700">
+    <div class="max-w-3xl mx-auto flex items-center justify-between gap-2">
+      <div class="flex items-center gap-1.5 min-w-0">
+        <span class="shrink-0 inline-flex items-center px-1.5 py-0.5 rounded text-[10px] sm:text-[11px] font-bold bg-amber-100 text-amber-800 border border-amber-300 font-mono">
           준비 중
         </span>
-        <span class="truncate text-xs font-medium text-slate-600" data-i18n="top_bar_msg">
-          일정 및 장소 세부 조율 중 (기획 및 준비 중인 행사입니다)
+        <span class="truncate text-[11px] sm:text-xs text-slate-600 font-medium" data-i18n="top_bar_msg">
+          일정·장소 세부 조율 중 (준비 중인 행사입니다)
         </span>
       </div>
-      <div class="shrink-0 flex items-center gap-3 font-mono text-xs">
+      <div class="shrink-0 flex items-center gap-2 sm:gap-3 font-mono text-[11px] sm:text-xs">
         <div class="flex items-center gap-1">
           <button id="lang-ko" onclick="setLanguage('ko')" class="font-bold text-slate-900 underline underline-offset-4 decoration-2 decoration-slate-900 px-1 py-0.5">KO</button>
           <span class="text-slate-300">/</span>
@@ -74,7 +74,7 @@
   </div>
 
   <main class="flex-grow">
-    <div class="max-w-3xl mx-auto px-4 py-6 sm:py-8 space-y-8">
+    <div class="max-w-3xl mx-auto px-4 py-5 sm:py-8 space-y-7 sm:space-y-8">
 
       <!-- Graphic Banner Container -->
       <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-100 shadow-sm">
@@ -85,12 +85,12 @@
         />
       </div>
 
-      <!-- Intro Headline & Description -->
+      <!-- Intro Headline & Description (Strict single line on mobile screens) -->
       <section>
-        <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 mb-3">
+        <h1 class="text-[21px] sm:text-3xl font-extrabold tracking-tight text-slate-900 mb-2 sm:mb-3 whitespace-nowrap overflow-hidden text-ellipsis">
           Yocto Project Meetup Korea 2026
         </h1>
-        <p class="text-sm sm:text-base text-slate-600 leading-relaxed font-normal" data-i18n="hero_desc">
+        <p class="text-xs sm:text-base text-slate-600 leading-relaxed font-normal" data-i18n="hero_desc">
           한국 임베디드 리눅스 및 Yocto Project 엔지니어들이 모여 실제 프로젝트 경험, 빌드 최적화, 최신 기능 및 아키텍처 노하우를 공유하고 자유롭게 소통하는 오프라인 밋업입니다.
         </p>
       </section>
@@ -105,39 +105,39 @@
         <div class="border border-slate-200 rounded-xl bg-slate-50/50 p-4 divide-y divide-slate-200/80 text-sm">
           
           <!-- Date -->
-          <div class="py-2.5 first:pt-0 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
-            <span class="font-medium text-slate-500 text-xs uppercase tracking-wider font-mono" data-i18n="lbl_date">일시 (Date &amp; Time)</span>
-            <div class="sm:text-right">
-              <span class="font-bold text-slate-900" data-i18n="val_date">2026년 12월 5일 (토) 오후</span>
-              <span class="text-xs text-amber-700 bg-amber-100 px-1.5 py-0.5 rounded font-mono ml-1.5" data-i18n="tag_tbd">잠정 예정</span>
+          <div class="py-2.5 first:pt-0 flex items-center justify-between gap-2">
+            <span class="font-medium text-slate-500 text-xs uppercase tracking-wider font-mono shrink-0" data-i18n="lbl_date">일시</span>
+            <div class="text-right truncate">
+              <span class="font-bold text-slate-900 text-xs sm:text-sm" data-i18n="val_date">2026년 12월 5일 (토) 오후</span>
+              <span class="text-[11px] text-amber-700 bg-amber-100 px-1.5 py-0.5 rounded font-mono ml-1 inline-block" data-i18n="tag_tbd">잠정 예정</span>
             </div>
           </div>
 
           <!-- Venue -->
-          <div class="py-2.5 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
-            <span class="font-medium text-slate-500 text-xs uppercase tracking-wider font-mono" data-i18n="lbl_venue">장소 (Venue)</span>
-            <div class="sm:text-right">
-              <a href="https://www.oss.kr/pages/5" target="_blank" rel="noopener noreferrer" class="font-bold text-sky-700 hover:text-sky-800 underline underline-offset-2 inline-flex items-center gap-1">
-                <span data-i18n="val_venue">OpenUP (오픈UP 소프트웨어센터, 서울)</span>
+          <div class="py-2.5 flex items-center justify-between gap-2">
+            <span class="font-medium text-slate-500 text-xs uppercase tracking-wider font-mono shrink-0" data-i18n="lbl_venue">장소</span>
+            <div class="text-right truncate">
+              <a href="https://www.oss.kr/pages/5" target="_blank" rel="noopener noreferrer" class="font-bold text-sky-700 hover:text-sky-800 underline underline-offset-2 inline-flex items-center gap-1 text-xs sm:text-sm">
+                <span data-i18n="val_venue">OpenUP (서울)</span>
                 <svg class="w-3.5 h-3.5 text-slate-400 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
               </a>
-              <span class="text-xs text-amber-700 bg-amber-100 px-1.5 py-0.5 rounded font-mono ml-1.5" data-i18n="tag_venue_wip">장소 협의 중</span>
+              <span class="text-[11px] text-amber-700 bg-amber-100 px-1.5 py-0.5 rounded font-mono ml-1 inline-block" data-i18n="tag_venue_wip">협의 중</span>
             </div>
           </div>
 
           <!-- Capacity -->
-          <div class="py-2.5 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
-            <span class="font-medium text-slate-500 text-xs uppercase tracking-wider font-mono" data-i18n="lbl_capacity">규모 (Capacity)</span>
-            <div class="sm:text-right font-semibold text-slate-900" data-i18n="val_capacity">
+          <div class="py-2.5 flex items-center justify-between gap-2">
+            <span class="font-medium text-slate-500 text-xs uppercase tracking-wider font-mono shrink-0" data-i18n="lbl_capacity">규모</span>
+            <div class="text-right font-semibold text-slate-900 text-xs sm:text-sm" data-i18n="val_capacity">
               오프라인 약 50명 (참가비 무료)
             </div>
           </div>
 
           <!-- Format -->
-          <div class="py-2.5 last:pb-0 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
-            <span class="font-medium text-slate-500 text-xs uppercase tracking-wider font-mono" data-i18n="lbl_format">구성 (Format)</span>
-            <div class="sm:text-right text-slate-700" data-i18n="val_format">
-              발표 4세션 (각 20분 발표 + 10분 Q&amp;A) + 오픈 네트워킹 (1시간)
+          <div class="py-2.5 last:pb-0 flex items-center justify-between gap-2">
+            <span class="font-medium text-slate-500 text-xs uppercase tracking-wider font-mono shrink-0" data-i18n="lbl_format">구성</span>
+            <div class="text-right text-slate-700 text-xs sm:text-sm" data-i18n="val_format">
+              발표 4세션 + 오픈 네트워킹 (1시간)
             </div>
           </div>
 
@@ -251,30 +251,30 @@
 
     const translations = {
       ko: {
-        top_bar_msg: "일정 및 장소 세부 조율 중 (기획 및 준비 중인 행사입니다)",
+        top_bar_msg: "일정·장소 세부 조율 중 (준비 중인 행사입니다)",
         nav_overview: "개요",
         nav_schedule: "세션",
         nav_sponsors: "스폰서",
         hero_desc: "한국 임베디드 리눅스 및 Yocto Project 엔지니어들이 모여 실제 프로젝트 경험, 빌드 최적화, 최신 기능 및 아키텍처 노하우를 공유하고 자유롭게 소통하는 오프라인 밋업입니다.",
         sec_overview: "행사 개요",
-        lbl_date: "일시 (Date & Time)",
+        lbl_date: "일시",
         val_date: "2026년 12월 5일 (토) 오후",
         tag_tbd: "잠정 예정",
-        lbl_venue: "장소 (Venue)",
-        val_venue: "OpenUP (오픈UP 소프트웨어센터, 서울)",
-        tag_venue_wip: "장소 협의 중",
-        lbl_capacity: "규모 (Capacity)",
+        lbl_venue: "장소",
+        val_venue: "OpenUP (서울)",
+        tag_venue_wip: "협의 중",
+        lbl_capacity: "규모",
         val_capacity: "오프라인 약 50명 (참가비 무료)",
-        lbl_format: "구성 (Format)",
-        val_format: "발표 4세션 (각 20분 발표 + 10분 Q&A) + 오픈 네트워킹 (1시간)",
+        lbl_format: "구성",
+        val_format: "발표 4세션 + 오픈 네트워킹 (1시간)",
         reg_title: "참가 신청 등록 (Registration)",
         reg_desc: "세부 일정 확정 후 Google Forms를 통해 선착순 50명 사전 등록이 진행됩니다.",
         reg_btn: "forms.gle [오픈 준비 중]",
         sec_schedule: "발표 세션 및 일정",
         th_speaker: "발표자 / 소속",
-        th_topic: "주제 (Topic)",
-        th_time: "진행 시간",
-        topic_tbd: "주제 조율 중 (To be announced)",
+        th_topic: "주제",
+        th_time: "시간",
+        topic_tbd: "주제 조율 중 (TBA)",
         social_name: "오픈 네트워킹 & 자유 교류",
         social_org: "참석자 전체",
         social_desc: "다과 및 음료와 함께 참석자 간 자유로운 기술 교류 및 네트워킹 진행",
@@ -284,26 +284,26 @@
         slot_sponsor: "스폰서 슬롯"
       },
       en: {
-        top_bar_msg: "Date & venue are in planning (Under preparation)",
+        top_bar_msg: "Date & venue are in planning (WIP)",
         hero_desc: "An in-person meetup for Korean embedded Linux and Yocto Project engineers to share production experience, build optimization, and connect with peers.",
         sec_overview: "Event Overview",
-        lbl_date: "Date & Time",
-        val_date: "Saturday, December 5, 2026 (Afternoon)",
+        lbl_date: "Date",
+        val_date: "Saturday, Dec 5, 2026 (Afternoon)",
         tag_tbd: "Tentative",
         lbl_venue: "Venue",
-        val_venue: "OpenUP Software Center, Seoul",
-        tag_venue_wip: "In Discussion",
+        val_venue: "OpenUP (Seoul)",
+        tag_venue_wip: "Preparing",
         lbl_capacity: "Capacity",
         val_capacity: "Approx. 50 Attendees (Free)",
         lbl_format: "Format",
-        val_format: "4 Talks (20m talk + 10m Q&A each) + 1h Open Networking",
+        val_format: "4 Talks + 1h Open Networking",
         reg_title: "Attendee Registration",
         reg_desc: "Registration will open via Google Forms for 50 attendees on a first-come, first-served basis once schedule is locked.",
         reg_btn: "forms.gle [Opening Soon]",
         sec_schedule: "Presentation Sessions & Timetable",
         th_speaker: "Speaker / Affiliation",
         th_topic: "Topic",
-        th_time: "Duration",
+        th_time: "Time",
         topic_tbd: "Topic to be announced",
         social_name: "Open Networking & Social Mixer",
         social_org: "All Attendees",
