@@ -171,8 +171,8 @@
           <table class="w-full text-left border-collapse text-xs sm:text-sm table-fixed">
             <thead>
               <tr class="border-b border-slate-200 bg-slate-50 font-mono text-xs text-slate-500">
-                <th class="py-2.5 px-3 sm:px-4 w-3/5 sm:w-2/3" data-i18n="th_speaker">발표자 / 소속</th>
-                <th class="py-2.5 px-3 sm:px-4 w-2/5 sm:w-1/3 text-right" data-i18n="th_topic">주제</th>
+                <th class="py-2.5 px-3 sm:px-4 w-[55%] sm:w-[50%]" data-i18n="th_speaker">발표자 / 소속</th>
+                <th class="py-2.5 px-3 sm:px-4 w-[45%] sm:w-[50%] text-center" data-i18n="th_topic">주제</th>
               </tr>
             </thead>
             <tbody id="session-tbody" class="divide-y divide-slate-100">
@@ -326,11 +326,11 @@
 
         html += `
           <tr class="hover:bg-slate-50 transition-colors">
-            <td class="py-2.5 px-3 sm:px-4">
+            <td class="py-2.5 px-3 sm:px-4 align-middle">
               <div class="font-bold text-slate-900 text-xs sm:text-sm truncate">${speakerName}</div>
               <div class="text-[11px] text-slate-500 truncate">${orgName}</div>
             </td>
-            <td class="py-2.5 px-3 sm:px-4 text-right">
+            <td class="py-2.5 px-3 sm:px-4 text-left align-middle">
               <span class="inline-block px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-100 text-slate-600 border border-slate-200">TBD</span>
             </td>
           </tr>
@@ -343,11 +343,11 @@
 
       html += `
         <tr class="bg-indigo-50/40">
-          <td class="py-2.5 px-3 sm:px-4">
+          <td class="py-2.5 px-3 sm:px-4 align-middle">
             <div class="font-bold text-indigo-950 text-xs sm:text-sm truncate">${socialName}</div>
             <div class="text-[11px] text-indigo-700 truncate">${socialOrg}</div>
           </td>
-          <td class="py-2.5 px-3 sm:px-4 text-right">
+          <td class="py-2.5 px-3 sm:px-4 text-left align-middle">
             <span class="inline-block px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-indigo-100 text-indigo-700 border border-indigo-200">1h</span>
           </td>
         </tr>
