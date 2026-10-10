@@ -21,15 +21,17 @@
 
 ## 🎙️ 발표 세션 (Schedule)
 
-각 세션은 **20분 발표 + 10분 질의응답(Q&A)** 으로 진행되며, 발표 종료 후 **1시간 동안 자유로운 오픈 네트워킹**이 진행됩니다.
+각 세션은 **20분 발표 + 10분 질의응답(Q&A)** 으로 진행되며 (발표 세션은 4개 이상으로 조율 중), 발표 종료 후 **1시간 동안 자유로운 오픈 네트워킹**이 진행됩니다.
 
 | 발표자 (Speaker) / 소속 (Affiliation) | 주제 (Topic) |
-| :--- | :---: |
-| **배창혁** (Changhyeok Bae) &middot; Mercedes-Benz Innovation Lab | `TBD` |
+| :--- | :--- |
+| **배창혁** (Changhyeok Bae) &middot; Mercedes-Benz Innovation Lab | Yocto Project Dev Day / ELCE 2026 후기 공유 |
 | **손현수** (Hyunsu Son) &middot; LG전자 (LG Electronics) | `TBD` |
 | **양동현** (Donghyun Yang) &middot; LG전자 (LG Electronics) | `TBD` |
 | **모우진** (Woojin Moh) &middot; 텔레칩스 (Telechips) | `TBD` |
 | **오픈 네트워킹 & 교류** (Social Mixer) &middot; 참석자 전체 | `1h` |
+
+> 💡 발표 세션은 4개 이상으로 확대될 수 있으며, 세부 발표 주제 및 순서는 순차적으로 업데이트됩니다.
 
 ---
 

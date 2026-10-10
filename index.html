@@ -137,7 +137,7 @@
           <div class="py-2.5 last:pb-0 flex items-center justify-between gap-2">
             <span class="font-medium text-slate-500 text-xs uppercase tracking-wider font-mono shrink-0" data-i18n="lbl_format">구성</span>
             <div class="text-right text-slate-700 text-xs sm:text-sm" data-i18n="val_format">
-              발표 4세션 + 오픈 네트워킹 (1시간)
+              발표 4세션 이상 (미정) + 오픈 네트워킹 (1시간)
             </div>
           </div>
 
@@ -171,14 +171,17 @@
           <table class="w-full text-left border-collapse text-xs sm:text-sm table-fixed">
             <thead>
               <tr class="border-b border-slate-200 bg-slate-50 font-mono text-xs text-slate-500">
-                <th class="py-2.5 px-3 sm:px-4 w-[55%] sm:w-[50%]" data-i18n="th_speaker">발표자 / 소속</th>
-                <th class="py-2.5 px-3 sm:px-4 w-[45%] sm:w-[50%] text-center" data-i18n="th_topic">주제</th>
+                <th class="py-2.5 px-3 sm:px-4 w-[48%] sm:w-[45%]" data-i18n="th_speaker">발표자 / 소속</th>
+                <th class="py-2.5 px-3 sm:px-4 w-[52%] sm:w-[55%] text-center" data-i18n="th_topic">주제</th>
               </tr>
             </thead>
             <tbody id="session-tbody" class="divide-y divide-slate-100">
               <!-- Dynamically populated from data/meetups.js -->
             </tbody>
           </table>
+        </div>
+        <div class="text-[11px] text-slate-500 font-mono text-right" data-i18n="schedule_note">
+          * 발표 세션은 4개 이상으로 확대될 수 있으며 세부 순서 및 주제는 조율 중입니다.
         </div>
       </section>
 
@@ -264,7 +267,7 @@
         lbl_capacity: "규모",
         val_capacity: "오프라인 약 50명 (참가비 무료)",
         lbl_format: "구성",
-        val_format: "발표 4세션 + 오픈 네트워킹 (1시간)",
+        val_format: "발표 4세션 이상 (미정) + 오픈 네트워킹 (1시간)",
         reg_title: "참가 신청 등록 (Registration)",
         reg_desc: "세부 일정 확정 후 Google Forms를 통해 선착순 50명 사전 등록이 진행됩니다.",
         reg_btn: "forms.gle [오픈 준비 중]",
@@ -272,6 +275,7 @@
         th_speaker: "발표자 / 소속",
         th_topic: "주제",
         th_time: "시간",
+        schedule_note: "* 발표 세션은 4개 이상으로 확대될 수 있으며 세부 순서 및 주제는 조율 중입니다.",
         topic_tbd: "주제 조율 중 (TBA)",
         social_name: "오픈 네트워킹 & 자유 교류",
         social_org: "참석자 전체",
@@ -294,7 +298,7 @@
         lbl_capacity: "Capacity",
         val_capacity: "Approx. 50 Attendees (Free)",
         lbl_format: "Format",
-        val_format: "4 Talks + 1h Open Networking",
+        val_format: "4+ Talks (TBD) + 1h Open Networking",
         reg_title: "Attendee Registration",
         reg_desc: "Registration will open via Google Forms for 50 attendees on a first-come, first-served basis once schedule is locked.",
         reg_btn: "forms.gle [Opening Soon]",
@@ -302,6 +306,7 @@
         th_speaker: "Speaker / Affiliation",
         th_topic: "Topic",
         th_time: "Time",
+        schedule_note: "* Sessions may expand to 4+ talks; timetable and topics are subject to change.",
         topic_tbd: "Topic to be announced",
         social_name: "Open Networking & Social Mixer",
         social_org: "All Attendees",
@@ -323,15 +328,21 @@
       edition.sessions.forEach(s => {
         const speakerName = s.speaker[lang];
         const orgName = s.org[lang];
+        const rawTopic = s.topic ? (typeof s.topic === 'string' ? s.topic : s.topic[lang]) : null;
+        const isTbd = !rawTopic || rawTopic.trim().toUpperCase() === 'TBD' || rawTopic.includes('조율');
+
+        const topicContent = isTbd
+          ? `<span class="inline-block px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-100 text-slate-600 border border-slate-200">TBD</span>`
+          : `<div class="font-medium text-slate-900 text-xs sm:text-sm leading-snug break-words">${rawTopic}</div>`;
 
         html += `
           <tr class="hover:bg-slate-50 transition-colors">
             <td class="py-2.5 px-3 sm:px-4 align-middle">
-              <div class="font-bold text-slate-900 text-xs sm:text-sm truncate">${speakerName}</div>
-              <div class="text-[11px] text-slate-500 truncate">${orgName}</div>
+              <div class="font-bold text-slate-900 text-xs sm:text-sm leading-tight">${speakerName}</div>
+              <div class="text-[11px] text-slate-500 leading-tight mt-0.5">${orgName}</div>
             </td>
             <td class="py-2.5 px-3 sm:px-4 text-left align-middle">
-              <span class="inline-block px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-100 text-slate-600 border border-slate-200">TBD</span>
+              ${topicContent}
             </td>
           </tr>
         `;
@@ -344,8 +355,8 @@
       html += `
         <tr class="bg-indigo-50/40">
           <td class="py-2.5 px-3 sm:px-4 align-middle">
-            <div class="font-bold text-indigo-950 text-xs sm:text-sm truncate">${socialName}</div>
-            <div class="text-[11px] text-indigo-700 truncate">${socialOrg}</div>
+            <div class="font-bold text-indigo-950 text-xs sm:text-sm leading-tight">${socialName}</div>
+            <div class="text-[11px] text-indigo-700 leading-tight mt-0.5">${socialOrg}</div>
           </td>
           <td class="py-2.5 px-3 sm:px-4 text-left align-middle">
             <span class="inline-block px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-indigo-100 text-indigo-700 border border-indigo-200">1h</span>

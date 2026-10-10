@@ -27,8 +27,8 @@ window.MEETUPS_DATA = [
       ko: "오프라인 약 50명",
       en: "Approx. 50 Attendees",
       sub: {
-        ko: "발표 세션 4개 + 네트워킹 (1시간)",
-        en: "4 Tech Talks + 1-Hour Networking"
+        ko: "발표 세션 4개 이상 (미정) + 네트워킹 (1시간)",
+        en: "4+ Tech Talks (TBD) + 1-Hour Networking"
       }
     },
     // Google Form application link (reserved for activation)
@@ -45,8 +45,8 @@ window.MEETUPS_DATA = [
           en: "Mercedes-Benz Innovation Lab"
         },
         topic: {
-          ko: "주제 조율 중 (To be announced)",
-          en: "Topic to be announced"
+          ko: "Yocto Project Dev Day / ELCE 2026 후기 공유",
+          en: "Yocto Project Dev Day / ELCE 2026 Recap"
         },
         duration: "20m + 10m Q&A"
       },
@@ -61,8 +61,8 @@ window.MEETUPS_DATA = [
           en: "LG Electronics"
         },
         topic: {
-          ko: "주제 조율 중 (To be announced)",
-          en: "Topic to be announced"
+          ko: "TBD",
+          en: "TBD"
         },
         duration: "20m + 10m Q&A"
       },
@@ -77,8 +77,8 @@ window.MEETUPS_DATA = [
           en: "LG Electronics"
         },
         topic: {
-          ko: "주제 조율 중 (To be announced)",
-          en: "Topic to be announced"
+          ko: "TBD",
+          en: "TBD"
         },
         duration: "20m + 10m Q&A"
       },
@@ -93,8 +93,8 @@ window.MEETUPS_DATA = [
           en: "Telechips"
         },
         topic: {
-          ko: "주제 조율 중 (To be announced)",
-          en: "Topic to be announced"
+          ko: "TBD",
+          en: "TBD"
         },
         duration: "20m + 10m Q&A"
       }
