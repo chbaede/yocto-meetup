@@ -38,4 +38,5 @@
 ## 🤝 스폰서십 & 파트너 (Sponsorship)
 
 Yocto Project Meetup Korea의 원활한 운영 및 커뮤니티 활성화를 위해 기업/기관 스폰서 및 파트너를 모집하고 있습니다.
+- **커뮤니티 / 프로젝트**: [Yocto Project](https://www.yoctoproject.org/)
 - **장소 파트너**: [OpenUP (오픈소스 소프트웨어 통합지원센터)](https://www.oss.kr/pages/5) *(협의 중)*
