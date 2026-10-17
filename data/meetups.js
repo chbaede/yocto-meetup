@@ -45,8 +45,8 @@ window.MEETUPS_DATA = [
           en: "Mercedes-Benz Innovation Lab"
         },
         topic: {
-          ko: "Yocto Project Dev Day / ELCE 2026 후기 공유",
-          en: "Yocto Project Dev Day / ELCE 2026 Recap"
+          ko: '<a href="https://pretalx.com/ypdd-2026/schedule/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline underline-offset-2">Yocto Project Dev Day</a> / <a href="https://osselceu2026.sched.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline underline-offset-2">ELCE 2026</a> 후기',
+          en: '<a href="https://pretalx.com/ypdd-2026/schedule/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline underline-offset-2">Yocto Project Dev Day</a> / <a href="https://osselceu2026.sched.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline underline-offset-2">ELCE 2026</a> Recap'
         },
         duration: "20m + 10m Q&A"
       },

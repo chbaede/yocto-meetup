@@ -25,7 +25,7 @@
 
 | 발표자 (Speaker) / 소속 (Affiliation) | 주제 (Topic) |
 | :--- | :--- |
-| **배창혁** (Changhyeok Bae) &middot; Mercedes-Benz Innovation Lab | Yocto Project Dev Day / ELCE 2026 후기 공유 |
+| **배창혁** (Changhyeok Bae) &middot; Mercedes-Benz Innovation Lab | [Yocto Project Dev Day](https://pretalx.com/ypdd-2026/schedule/) / [ELCE 2026](https://osselceu2026.sched.com/) 후기 |
 | **손현수** (Hyunsu Son) &middot; LG전자 (LG Electronics) | `TBD` |
 | **양동현** (Donghyun Yang) &middot; LG전자 (LG Electronics) | `TBD` |
 | **모우진** (Woojin Moh) &middot; 텔레칩스 (Telechips) | `TBD` |
