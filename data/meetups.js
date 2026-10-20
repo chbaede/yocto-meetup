@@ -31,7 +31,13 @@ window.MEETUPS_DATA = [
         en: "4+ Tech Talks (TBD) + 1-Hour Networking"
       }
     },
-    // Google Form application link (reserved for activation)
+    // Registration schedule: Opens Nov 2, confirmation emails sent Nov 22 based on application review
+    registration: {
+      openDate: "2026-11-02",
+      confirmDate: "2026-11-22",
+      type: "review" // Application review (not first-come, first-served)
+    },
+    // Google Form application link (reserved for activation on Nov 2)
     registrationFormUrl: null, // e.g. "https://forms.gle/..."
     sessions: [
       {

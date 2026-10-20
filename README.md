@@ -15,7 +15,7 @@
 - **일시 (Date)**: 2026년 12월 5일 (토) 오후 / Saturday, December 5, 2026 (Afternoon) *(잠정 예정)*
 - **장소 (Venue)**: [OpenUP (오픈UP 소프트웨어센터, 서울)](https://www.oss.kr/pages/5) *(확정)*
 - **규모 (Scale)**: 오프라인 약 50명
-- **참가비 (Fee)**: 무료 (Google Forms 사전 등록제)
+- **참가 신청 (Registration)**: 11월 2일(월) 오픈 (신청 내용 검토 후 11월 22일 확정 메일 발송 / 참가비 무료)
 
 ---
 
