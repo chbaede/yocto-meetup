@@ -19,8 +19,8 @@ window.MEETUPS_DATA = [
       ko: "OpenUP (오픈UP 소프트웨어센터, 서울)",
       en: "OpenUP Software Center, Seoul",
       status: {
-        ko: "장소 협의 및 대관 준비 중",
-        en: "Venue discussion in progress"
+        ko: "장소 확정 (오픈UP 소프트웨어센터)",
+        en: "Venue Confirmed (OpenUP Software Center)"
       }
     },
     capacity: {

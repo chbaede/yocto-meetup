@@ -23,9 +23,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6854824605420161" crossorigin="anonymous"></script>
-
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -58,7 +55,7 @@
           준비 중
         </span>
         <span class="truncate text-[11px] sm:text-xs text-slate-600 font-medium" data-i18n="top_bar_msg">
-          일정·장소 세부 조율 중 (준비 중인 행사입니다)
+          장소 확정 (OpenUP) · 세부 일정 조율 중
         </span>
       </div>
       <div class="shrink-0 flex items-center gap-2 sm:gap-3 font-mono text-[11px] sm:text-xs">
@@ -124,7 +121,7 @@
                 <span data-i18n="val_venue">OpenUP (서울)</span>
                 <svg class="w-3.5 h-3.5 text-slate-400 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
               </a>
-              <span class="text-[11px] text-amber-700 bg-amber-100 px-1.5 py-0.5 rounded font-mono ml-1 inline-block" data-i18n="tag_venue_wip">협의 중</span>
+              <span class="text-[11px] text-emerald-700 bg-emerald-100 px-1.5 py-0.5 rounded font-mono ml-1 inline-block" data-i18n="tag_venue_wip">확정</span>
             </div>
           </div>
 
@@ -238,26 +235,6 @@
         </div>
       </section>
 
-      <!-- Sponsored Ad Section -->
-      <section class="space-y-2 pt-2">
-        <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 px-1">
-          <span class="tracking-wider uppercase">ADVERTISEMENT</span>
-          <span>Google Ads</span>
-        </div>
-        <div class="border border-slate-200/80 rounded-xl p-2 bg-slate-50/50 overflow-hidden flex items-center justify-center min-h-[90px]">
-          <!-- 스마트인포_디스플레이광고 -->
-          <ins class="adsbygoogle"
-               style="display:block"
-               data-ad-client="ca-pub-6854824605420161"
-               data-ad-slot="9426228178"
-               data-ad-format="auto"
-               data-full-width-responsive="true"></ins>
-          <script>
-               (adsbygoogle = window.adsbygoogle || []).push({});
-          </script>
-        </div>
-      </section>
-
     </div>
   </main>
 
@@ -279,7 +256,7 @@
 
     const translations = {
       ko: {
-        top_bar_msg: "일정·장소 세부 조율 중 (준비 중인 행사입니다)",
+        top_bar_msg: "장소 확정 (OpenUP) · 세부 일정 조율 중",
         nav_overview: "개요",
         nav_schedule: "세션",
         nav_sponsors: "스폰서",
@@ -290,7 +267,7 @@
         tag_tbd: "잠정 예정",
         lbl_venue: "장소",
         val_venue: "OpenUP (서울)",
-        tag_venue_wip: "협의 중",
+        tag_venue_wip: "확정",
         lbl_capacity: "규모",
         val_capacity: "오프라인 약 50명 (참가비 무료)",
         lbl_format: "구성",
@@ -313,7 +290,7 @@
         slot_sponsor: "스폰서 슬롯"
       },
       en: {
-        top_bar_msg: "Date & venue are in planning (WIP)",
+        top_bar_msg: "Venue Confirmed (OpenUP) · Schedule in progress",
         hero_desc: "An in-person meetup for Korean embedded Linux and Yocto Project engineers to share production experience, build optimization, and connect with peers.",
         sec_overview: "Event Overview",
         lbl_date: "Date",
@@ -321,7 +298,7 @@
         tag_tbd: "Tentative",
         lbl_venue: "Venue",
         val_venue: "OpenUP (Seoul)",
-        tag_venue_wip: "Preparing",
+        tag_venue_wip: "Confirmed",
         lbl_capacity: "Capacity",
         val_capacity: "Approx. 50 Attendees (Free)",
         lbl_format: "Format",
