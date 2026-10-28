@@ -26,8 +26,8 @@
 | 발표자 (Speaker) / 소속 (Affiliation) | 주제 (Topic) |
 | :--- | :--- |
 | **배창혁** (Changhyeok Bae) &middot; Mercedes-Benz Innovation Lab | [Yocto Project Dev Day](https://pretalx.com/ypdd-2026/schedule/) / [ELCE 2026](https://osselceu2026.sched.com/) 후기 |
-| **손현수** (Hyunsu Son) &middot; LG전자 (LG Electronics) | `TBD` |
-| **양동현** (Donghyun Yang) &middot; LG전자 (LG Electronics) | `TBD` |
+| **손현수** (Hyunsu Son) &middot; LG전자 (LG Electronics) | yocto 메타 클린코드 & 디버깅 |
+| **양동현** (Donghyun Yang) &middot; LG전자 (LG Electronics) | clang,gcc pgo를 사용하여 최적화 및 빌드속도 향상 |
 | **모우진** (Woojin Moh) &middot; 텔레칩스 (Telechips) | `TBD` |
 | **오픈 네트워킹 & 교류** (Social Mixer) &middot; 참석자 전체 | `1h` |
 

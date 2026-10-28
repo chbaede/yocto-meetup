@@ -67,8 +67,8 @@ window.MEETUPS_DATA = [
           en: "LG Electronics"
         },
         topic: {
-          ko: "TBD",
-          en: "TBD"
+          ko: "yocto 메타 클린코드 & 디버깅",
+          en: "Yocto Meta Clean Code & Debugging"
         },
         duration: "20m + 10m Q&A"
       },
@@ -83,8 +83,8 @@ window.MEETUPS_DATA = [
           en: "LG Electronics"
         },
         topic: {
-          ko: "TBD",
-          en: "TBD"
+          ko: "clang,gcc pgo를 사용하여 최적화 및 빌드속도 향상",
+          en: "Optimization and Build Speed Acceleration using Clang/GCC PGO"
         },
         duration: "20m + 10m Q&A"
       },
