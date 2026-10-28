@@ -111,7 +111,7 @@
           <div class="py-2.5 first:pt-0 flex items-center justify-between gap-2">
             <span class="font-medium text-slate-500 text-xs uppercase tracking-wider font-mono shrink-0" data-i18n="lbl_date">일시</span>
             <div class="text-right truncate">
-              <span class="font-bold text-slate-900 text-xs sm:text-sm" data-i18n="val_date">2026년 12월 5일 (토) 오후</span>
+              <span class="font-bold text-slate-900 text-xs sm:text-sm" data-i18n="val_date">2026년 12월 5일 (토) 13:00 ~ 17:00</span>
               <span class="text-[11px] text-amber-700 bg-amber-100 px-1.5 py-0.5 rounded font-mono ml-1 inline-block" data-i18n="tag_tbd">잠정 예정</span>
             </div>
           </div>
@@ -140,7 +140,7 @@
           <div class="py-2.5 last:pb-0 flex items-center justify-between gap-2">
             <span class="font-medium text-slate-500 text-xs uppercase tracking-wider font-mono shrink-0" data-i18n="lbl_format">구성</span>
             <div class="text-right text-slate-700 text-xs sm:text-sm" data-i18n="val_format">
-              발표 4세션 이상 (미정) + 오픈 네트워킹 (1시간)
+              발표 4세션 + 네트워킹 (휴식 20분 + 오픈 네트워킹 70분)
             </div>
           </div>
 
@@ -167,15 +167,15 @@
             <span class="w-1.5 h-4 rounded-full bg-sky-500 inline-block"></span>
             <span data-i18n="sec_schedule">발표 세션 및 일정</span>
           </h2>
-          <span class="text-xs font-mono text-slate-500">20m talk + 10m Q&amp;A</span>
+          <span class="text-xs font-mono text-slate-500">13:00 - 17:00 (4h)</span>
         </div>
 
         <div class="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-xs">
           <table class="w-full text-left border-collapse text-xs sm:text-sm table-fixed">
             <thead>
               <tr class="border-b border-slate-200 bg-slate-50 font-mono text-xs text-slate-500">
-                <th class="py-2.5 px-3 sm:px-4 w-[48%] sm:w-[45%]" data-i18n="th_speaker">발표자 / 소속</th>
-                <th class="py-2.5 px-3 sm:px-4 w-[52%] sm:w-[55%] text-center" data-i18n="th_topic">주제</th>
+                <th class="py-2.5 px-3 sm:px-4 w-[46%] sm:w-[42%]" data-i18n="th_speaker">시간 / 발표자</th>
+                <th class="py-2.5 px-3 sm:px-4 w-[54%] sm:w-[58%] text-center" data-i18n="th_topic">주제 및 내용</th>
               </tr>
             </thead>
             <tbody id="session-tbody" class="divide-y divide-slate-100">
@@ -279,7 +279,7 @@
         hero_desc: "한국 임베디드 리눅스 및 Yocto Project 엔지니어들이 모여 실제 프로젝트 경험, 빌드 최적화, 최신 기능 및 아키텍처 노하우를 공유하고 자유롭게 소통하는 오프라인 밋업입니다.",
         sec_overview: "행사 개요",
         lbl_date: "일시",
-        val_date: "2026년 12월 5일 (토) 오후",
+        val_date: "2026년 12월 5일 (토) 13:00 ~ 17:00",
         tag_tbd: "잠정 예정",
         lbl_venue: "장소",
         val_venue: "OpenUP (서울)",
@@ -287,15 +287,15 @@
         lbl_capacity: "규모",
         val_capacity: "오프라인 약 50명 (참가비 무료)",
         lbl_format: "구성",
-        val_format: "발표 4세션 이상 (미정) + 오픈 네트워킹 (1시간)",
+        val_format: "발표 4세션 + 네트워킹 (휴식 20분 + 오픈 네트워킹 70분)",
         reg_title: "참가 신청 등록 (Registration)",
         reg_desc: "11월 2일(월) Google Forms를 통해 참가 신청이 오픈됩니다. 선착순이 아닌 신청 내용 검토 후 11월 22일(일)에 최종 참석 확정 메일을 개별 발송해 드립니다.",
         reg_btn: "forms.gle [11월 2일 오픈]",
         sec_schedule: "발표 세션 및 일정",
-        th_speaker: "발표자 / 소속",
-        th_topic: "주제",
+        th_speaker: "시간 / 발표자",
+        th_topic: "주제 및 내용",
         th_time: "시간",
-        schedule_note: "* 발표 세션은 4개 이상으로 확대될 수 있으며 세부 순서 및 주제는 조율 중입니다.",
+        schedule_note: "* 세부 발표 순서 및 진행 상황에 따라 일정이 일부 조정될 수 있습니다.",
         topic_tbd: "주제 조율 중 (TBA)",
         social_name: "오픈 네트워킹 & 자유 교류",
         social_org: "참석자 전체",
@@ -310,7 +310,7 @@
         hero_desc: "An in-person meetup for Korean embedded Linux and Yocto Project engineers to share production experience, build optimization, and connect with peers.",
         sec_overview: "Event Overview",
         lbl_date: "Date",
-        val_date: "Saturday, Dec 5, 2026 (Afternoon)",
+        val_date: "Saturday, Dec 5, 2026, 13:00 - 17:00",
         tag_tbd: "Tentative",
         lbl_venue: "Venue",
         val_venue: "OpenUP (Seoul)",
@@ -318,15 +318,15 @@
         lbl_capacity: "Capacity",
         val_capacity: "Approx. 50 Attendees (Free)",
         lbl_format: "Format",
-        val_format: "4+ Talks (TBD) + 1h Open Networking",
+        val_format: "4 Tech Talks + Networking (Break 20m + Mixer 70m)",
         reg_title: "Attendee Registration",
         reg_desc: "Registration opens on Monday, Nov 2 via Google Forms. Attendees will be selected based on application review (not first-come, first-served), with confirmation emails sent on Nov 22.",
         reg_btn: "forms.gle [Opens Nov 2]",
         sec_schedule: "Presentation Sessions & Timetable",
-        th_speaker: "Speaker / Affiliation",
-        th_topic: "Topic",
+        th_speaker: "Time & Speaker",
+        th_topic: "Topic & Details",
         th_time: "Time",
-        schedule_note: "* Sessions may expand to 4+ talks; timetable and topics are subject to change.",
+        schedule_note: "* The timetable and order of presentations may be slightly adjusted as needed.",
         topic_tbd: "Topic to be announced",
         social_name: "Open Networking & Social Mixer",
         social_org: "All Attendees",
@@ -346,18 +346,35 @@
       let html = '';
 
       edition.sessions.forEach(s => {
+        const timeStr = s.time || '';
         const speakerName = s.speaker[lang];
         const orgName = s.org[lang];
         const rawTopic = s.topic ? (typeof s.topic === 'string' ? s.topic : s.topic[lang]) : null;
         const isTbd = !rawTopic || rawTopic.trim().toUpperCase() === 'TBD' || rawTopic.includes('조율');
 
-        const topicContent = isTbd
-          ? `<span class="inline-block px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-100 text-slate-600 border border-slate-200">TBD</span>`
-          : `<div class="font-medium text-slate-900 text-xs sm:text-sm leading-snug break-words">${rawTopic}</div>`;
+        let topicContent;
+        if (s.isEvent) {
+          const badgeColor = s.type === 'Networking' ? 'bg-indigo-100 text-indigo-700 border-indigo-200' : 'bg-slate-100 text-slate-700 border-slate-200';
+          const durBadge = s.duration ? `<span class="inline-block px-1.5 py-0.5 rounded text-[10px] font-mono font-bold ${badgeColor} border mr-1.5">${s.duration}</span>` : '';
+          topicContent = `
+            <div class="text-xs sm:text-sm text-slate-700 leading-snug break-words">
+              ${durBadge}${rawTopic}
+            </div>
+          `;
+        } else if (isTbd) {
+          topicContent = `<span class="inline-block px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-slate-100 text-slate-600 border border-slate-200">TBD</span>`;
+        } else {
+          topicContent = `<div class="font-medium text-slate-900 text-xs sm:text-sm leading-snug break-words">${rawTopic}</div>`;
+        }
+
+        const rowBg = s.isEvent
+          ? (s.type === 'Networking' ? 'bg-indigo-50/40' : 'bg-slate-50/60')
+          : 'hover:bg-slate-50 transition-colors';
 
         html += `
-          <tr class="hover:bg-slate-50 transition-colors">
+          <tr class="${rowBg}">
             <td class="py-2.5 px-3 sm:px-4 align-middle">
+              <div class="font-mono text-[11px] text-sky-700 font-semibold mb-0.5">${timeStr}</div>
               <div class="font-bold text-slate-900 text-xs sm:text-sm leading-tight">${speakerName}</div>
               <div class="text-[11px] text-slate-500 leading-tight mt-0.5">${orgName}</div>
             </td>
@@ -367,22 +384,6 @@
           </tr>
         `;
       });
-
-      // Social Mixer
-      const socialName = translations[lang].social_name;
-      const socialOrg = translations[lang].social_org;
-
-      html += `
-        <tr class="bg-indigo-50/40">
-          <td class="py-2.5 px-3 sm:px-4 align-middle">
-            <div class="font-bold text-indigo-950 text-xs sm:text-sm leading-tight">${socialName}</div>
-            <div class="text-[11px] text-indigo-700 leading-tight mt-0.5">${socialOrg}</div>
-          </td>
-          <td class="py-2.5 px-3 sm:px-4 text-left align-middle">
-            <span class="inline-block px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-indigo-100 text-indigo-700 border border-indigo-200">1h</span>
-          </td>
-        </tr>
-      `;
 
       tbody.innerHTML = html;
 

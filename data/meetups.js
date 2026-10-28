@@ -8,8 +8,8 @@ window.MEETUPS_DATA = [
     isCurrent: true,
     banner: "banner.png",
     date: {
-      ko: "2026년 12월 5일 (토) 오후",
-      en: "Saturday, December 5, 2026 (Afternoon)",
+      ko: "2026년 12월 5일 (토) 13:00 ~ 17:00",
+      en: "Saturday, December 5, 2026, 13:00 - 17:00",
       status: {
         ko: "잠정 예정 (확정 전 / 조율 중)",
         en: "Tentative / Subject to confirmation"
@@ -27,8 +27,8 @@ window.MEETUPS_DATA = [
       ko: "오프라인 약 50명",
       en: "Approx. 50 Attendees",
       sub: {
-        ko: "발표 세션 4개 이상 (미정) + 네트워킹 (1시간)",
-        en: "4+ Tech Talks (TBD) + 1-Hour Networking"
+        ko: "발표 세션 4개 + 네트워킹 (휴식 20분 + 오픈 네트워킹 70분)",
+        en: "4 Tech Talks + Networking (Break 20m + Mixer 70m)"
       }
     },
     // Registration schedule: Opens Nov 2, confirmation emails sent Nov 22 based on application review
@@ -41,6 +41,25 @@ window.MEETUPS_DATA = [
     registrationFormUrl: null, // e.g. "https://forms.gle/..."
     sessions: [
       {
+        time: "13:00 - 13:30",
+        type: "Registration",
+        speaker: {
+          ko: "참가자 등록",
+          en: "Registration"
+        },
+        org: {
+          ko: "입장 및 명찰 수령",
+          en: "Check-in & Badge Pickup"
+        },
+        topic: {
+          ko: "참석자 등록 및 행사 안내",
+          en: "Attendee check-in & event briefing"
+        },
+        duration: "30m",
+        isEvent: true
+      },
+      {
+        time: "13:30 - 14:00",
         type: "Talk 1",
         speaker: {
           ko: "배창혁 (Changhyeok Bae)",
@@ -57,6 +76,7 @@ window.MEETUPS_DATA = [
         duration: "20m + 10m Q&A"
       },
       {
+        time: "14:00 - 14:30",
         type: "Talk 2",
         speaker: {
           ko: "손현수 (Hyunsu Son)",
@@ -73,6 +93,25 @@ window.MEETUPS_DATA = [
         duration: "20m + 10m Q&A"
       },
       {
+        time: "14:30 - 14:50",
+        type: "Break",
+        speaker: {
+          ko: "네트워킹 및 휴식",
+          en: "Networking & Break"
+        },
+        org: {
+          ko: "중간 휴식",
+          en: "Intermission"
+        },
+        topic: {
+          ko: "자유 교류 및 다과 (20분)",
+          en: "Break & Mini Mixer (20 mins)"
+        },
+        duration: "20m",
+        isEvent: true
+      },
+      {
+        time: "14:50 - 15:20",
         type: "Talk 3",
         speaker: {
           ko: "양동현 (Donghyun Yang)",
@@ -89,6 +128,7 @@ window.MEETUPS_DATA = [
         duration: "20m + 10m Q&A"
       },
       {
+        time: "15:20 - 15:50",
         type: "Talk 4",
         speaker: {
           ko: "모우진 (Woojin Moh)",
@@ -103,11 +143,29 @@ window.MEETUPS_DATA = [
           en: "TBD"
         },
         duration: "20m + 10m Q&A"
+      },
+      {
+        time: "15:50 - 17:00",
+        type: "Networking",
+        speaker: {
+          ko: "오픈 네트워킹 & 자유 교류",
+          en: "Open Networking & Social Mixer"
+        },
+        org: {
+          ko: "참석자 전체",
+          en: "All Attendees"
+        },
+        topic: {
+          ko: "다과 및 자유 기술 네트워킹 (70분)",
+          en: "Refreshments & Technical Networking (70 mins)"
+        },
+        duration: "70m",
+        isEvent: true
       }
     ],
     networkingDuration: {
-      ko: "~ 60분 (1 Hour)",
-      en: "~ 60 mins (1 Hour)"
+      ko: "70분 (1 Hour 10 Mins)",
+      en: "70 mins (1 Hour 10 Mins)"
     }
   }
 ];
