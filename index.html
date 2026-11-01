@@ -54,11 +54,11 @@
   <div class="border-b border-slate-200 bg-slate-50/95 px-3 sm:px-4 py-2 safe-top text-xs text-slate-700">
     <div class="max-w-3xl mx-auto flex items-center justify-between gap-2">
       <div class="flex items-center gap-1.5 min-w-0">
-        <span class="shrink-0 inline-flex items-center px-1.5 py-0.5 rounded text-[10px] sm:text-[11px] font-bold bg-amber-100 text-amber-800 border border-amber-300 font-mono">
-          준비 중
+        <span class="shrink-0 inline-flex items-center px-1.5 py-0.5 rounded text-[10px] sm:text-[11px] font-bold bg-sky-100 text-sky-800 border border-sky-300 font-mono" data-i18n="top_bar_tag">
+          안내
         </span>
         <span class="truncate text-[11px] sm:text-xs text-slate-600 font-medium" data-i18n="top_bar_msg">
-          장소 확정 (OpenUP) · 세부 일정 조율 중
+          본 행사의 모든 발표 및 세션은 한국어로 진행됩니다
         </span>
       </div>
       <div class="shrink-0 flex items-center gap-2 sm:gap-3 font-mono text-[11px] sm:text-xs">
@@ -110,9 +110,8 @@
           <!-- Date -->
           <div class="py-2.5 first:pt-0 flex items-center justify-between gap-2">
             <span class="font-medium text-slate-500 text-xs uppercase tracking-wider font-mono shrink-0" data-i18n="lbl_date">일시</span>
-            <div class="text-right truncate">
-              <span class="font-bold text-slate-900 text-xs sm:text-sm" data-i18n="val_date">2026년 12월 5일 (토) 13:00 ~ 17:00</span>
-              <span class="text-[11px] text-amber-700 bg-amber-100 px-1.5 py-0.5 rounded font-mono ml-1 inline-block" data-i18n="tag_tbd">잠정 예정</span>
+            <div class="text-right truncate font-bold text-slate-900 text-xs sm:text-sm" data-i18n="val_date">
+              2026년 12월 5일 (토) 13:00 ~ 17:00
             </div>
           </div>
 
@@ -125,6 +124,14 @@
                 <svg class="w-3.5 h-3.5 text-slate-400 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
               </a>
               <span class="text-[11px] text-emerald-700 bg-emerald-100 px-1.5 py-0.5 rounded font-mono ml-1 inline-block" data-i18n="tag_venue_wip">확정</span>
+            </div>
+          </div>
+
+          <!-- Language -->
+          <div class="py-2.5 flex items-center justify-between gap-2">
+            <span class="font-medium text-slate-500 text-xs uppercase tracking-wider font-mono shrink-0" data-i18n="lbl_lang">언어</span>
+            <div class="text-right text-slate-900 font-semibold text-xs sm:text-sm" data-i18n="val_lang">
+              한국어 (Korean)
             </div>
           </div>
 
@@ -182,9 +189,6 @@
               <!-- Dynamically populated from data/meetups.js -->
             </tbody>
           </table>
-        </div>
-        <div class="text-[11px] text-slate-500 font-mono text-right" data-i18n="schedule_note">
-          * 발표 세션은 4개 이상으로 확대될 수 있으며 세부 순서 및 주제는 조율 중입니다.
         </div>
       </section>
 
@@ -272,7 +276,8 @@
 
     const translations = {
       ko: {
-        top_bar_msg: "장소 확정 (OpenUP) · 세부 일정 조율 중",
+        top_bar_tag: "안내",
+        top_bar_msg: "본 행사의 모든 발표 및 세션은 한국어로 진행됩니다",
         nav_overview: "개요",
         nav_schedule: "세션",
         nav_sponsors: "스폰서",
@@ -280,10 +285,11 @@
         sec_overview: "행사 개요",
         lbl_date: "일시",
         val_date: "2026년 12월 5일 (토) 13:00 ~ 17:00",
-        tag_tbd: "잠정 예정",
         lbl_venue: "장소",
         val_venue: "OpenUP (서울)",
         tag_venue_wip: "확정",
+        lbl_lang: "진행 언어",
+        val_lang: "한국어 (Korean)",
         lbl_capacity: "규모",
         val_capacity: "오프라인 약 50명 (참가비 무료)",
         lbl_format: "구성",
@@ -295,26 +301,27 @@
         th_speaker: "시간 / 발표자",
         th_topic: "주제 및 내용",
         th_time: "시간",
-        schedule_note: "* 세부 발표 순서 및 진행 상황에 따라 일정이 일부 조정될 수 있습니다.",
-        topic_tbd: "주제 조율 중 (TBA)",
+        topic_tbd: "TBD",
         social_name: "오픈 네트워킹 & 자유 교류",
         social_org: "참석자 전체",
-        social_desc: "다과 및 음료와 함께 참석자 간 자유로운 기술 교류 및 네트워킹 진행",
+        social_desc: "네트워킹",
         sec_sponsors: "스폰서 & 파트너",
         sponsor_status_tag: "스폰서 모집 중",
         sponsor_desc: "Yocto Project Meetup Korea의 원활한 운영 및 국내 임베디드 오픈소스 개발자 커뮤니티 활성화를 후원해주실 기업 및 기관 스폰서를 모시고 있습니다.",
         slot_sponsor: "스폰서 슬롯"
       },
       en: {
-        top_bar_msg: "Venue Confirmed (OpenUP) · Schedule in progress",
+        top_bar_tag: "NOTICE",
+        top_bar_msg: "All presentations and sessions will be conducted in Korean",
         hero_desc: "An in-person meetup for Korean embedded Linux and Yocto Project engineers to share production experience, build optimization, and connect with peers.",
         sec_overview: "Event Overview",
         lbl_date: "Date",
         val_date: "Saturday, Dec 5, 2026, 13:00 - 17:00",
-        tag_tbd: "Tentative",
         lbl_venue: "Venue",
         val_venue: "OpenUP (Seoul)",
         tag_venue_wip: "Confirmed",
+        lbl_lang: "Language",
+        val_lang: "Korean (한국어)",
         lbl_capacity: "Capacity",
         val_capacity: "Approx. 50 Attendees (Free)",
         lbl_format: "Format",
@@ -326,11 +333,10 @@
         th_speaker: "Time & Speaker",
         th_topic: "Topic & Details",
         th_time: "Time",
-        schedule_note: "* The timetable and order of presentations may be slightly adjusted as needed.",
-        topic_tbd: "Topic to be announced",
+        topic_tbd: "TBD",
         social_name: "Open Networking & Social Mixer",
         social_org: "All Attendees",
-        social_desc: "Technical discussion and community networking with refreshments",
+        social_desc: "Networking",
         sec_sponsors: "Sponsors & Partners",
         sponsor_status_tag: "Sponsors Welcome",
         sponsor_desc: "We welcome corporate and community sponsors to support this open-source developer meetup.",

@@ -11,8 +11,8 @@ window.MEETUPS_DATA = [
       ko: "2026년 12월 5일 (토) 13:00 ~ 17:00",
       en: "Saturday, December 5, 2026, 13:00 - 17:00",
       status: {
-        ko: "잠정 예정 (확정 전 / 조율 중)",
-        en: "Tentative / Subject to confirmation"
+        ko: "일시 확정",
+        en: "Confirmed"
       }
     },
     venue: {
@@ -22,6 +22,10 @@ window.MEETUPS_DATA = [
         ko: "장소 확정 (오픈UP 소프트웨어센터)",
         en: "Venue Confirmed (OpenUP Software Center)"
       }
+    },
+    language: {
+      ko: "한국어 (Korean)",
+      en: "Korean (한국어)"
     },
     capacity: {
       ko: "오프라인 약 50명",
@@ -156,8 +160,8 @@ window.MEETUPS_DATA = [
           en: "All Attendees"
         },
         topic: {
-          ko: "다과 및 자유 기술 네트워킹 (70분)",
-          en: "Refreshments & Technical Networking (70 mins)"
+          ko: "네트워킹",
+          en: "Networking"
         },
         duration: "70m",
         isEvent: true
