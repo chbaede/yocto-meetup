@@ -29,7 +29,7 @@
 | **14:00 ~ 14:30** | **손현수** (Hyunsu Son) &middot; LG전자 (LG Electronics) | yocto 메타 클린코드 & 디버깅 |
 | **14:30 ~ 14:50** | **네트워킹 및 휴식** (Break & Mixer) | 중간 휴식 및 자유 교류 (20분) |
 | **14:50 ~ 15:20** | **양동현** (Donghyun Yang) &middot; LG전자 (LG Electronics) | clang,gcc pgo를 사용하여 최적화 및 빌드속도 향상 |
-| **15:20 ~ 15:50** | **모우진** (Woojin Moh) &middot; 텔레칩스 (Telechips) | `TBD` |
+| **15:20 ~ 15:50** | **모우진** (Woojin Moh) &middot; 텔레칩스 (Telechips) | Chip사에서의 Yocto Platform 구성하기 |
 | **15:50 ~ 17:00** | **오픈 네트워킹 & 교류** (Social Mixer) &middot; 참석자 전체 | 네트워킹 |
 
 > 💡 발표 세션은 발표자와 주최측 사정에 따라 변경될 수 있습니다.

@@ -143,8 +143,8 @@ window.MEETUPS_DATA = [
           en: "Telechips"
         },
         topic: {
-          ko: "TBD",
-          en: "TBD"
+          ko: "Chip사에서의 Yocto Platform 구성하기",
+          en: "Building a Yocto Platform at a Semiconductor (Chip) Company"
         },
         duration: "20m + 10m Q&A"
       },
