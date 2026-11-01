@@ -152,12 +152,12 @@
         <div>
           <div class="text-sm font-bold text-slate-900 mb-0.5" data-i18n="reg_title">참가 신청 등록 (Registration)</div>
           <div class="text-xs text-slate-600" data-i18n="reg_desc">
-            11월 2일(월) Google Forms를 통해 참가 신청이 오픈됩니다. 선착순이 아닌 신청 내용 검토 후 11월 22일(일)에 최종 참석 확정 메일을 개별 발송해 드립니다.
+            Google Forms를 통해 참가 신청을 받고 있습니다. 선착순이 아닌 신청 내용 검토 후 11월 22일(일) 전에 최종 참석 확정 메일을 개별 발송해 드립니다.
           </div>
         </div>
-        <button id="google-form-btn" disabled class="px-4 py-2 rounded-lg border border-slate-200 bg-white text-slate-400 font-mono text-xs cursor-not-allowed text-center shrink-0">
-          <span data-i18n="reg_btn">forms.gle [11월 2일 오픈]</span>
-        </button>
+        <a id="google-form-btn" href="https://forms.gle/otDyaN6zYH6v1Nyq8" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-white font-mono text-xs cursor-pointer text-center shrink-0 transition-colors inline-block">
+          <span data-i18n="reg_btn">Google Form 등록 바로가기 →</span>
+        </a>
       </section>
 
       <!-- Schedule Table -->
@@ -289,8 +289,8 @@
         lbl_format: "구성",
         val_format: "발표 4세션 + 네트워킹 (휴식 20분 + 오픈 네트워킹 70분)",
         reg_title: "참가 신청 등록 (Registration)",
-        reg_desc: "11월 2일(월) Google Forms를 통해 참가 신청이 오픈됩니다. 선착순이 아닌 신청 내용 검토 후 11월 22일(일)에 최종 참석 확정 메일을 개별 발송해 드립니다.",
-        reg_btn: "forms.gle [11월 2일 오픈]",
+        reg_desc: "Google Forms를 통해 참가 신청을 받고 있습니다. 선착순이 아닌 신청 내용 검토 후 11월 22일(일) 전에 최종 참석 확정 메일을 개별 발송해 드립니다.",
+        reg_btn: "Google Form 등록 바로가기 →",
         sec_schedule: "발표 세션 및 일정",
         th_speaker: "시간 / 발표자",
         th_topic: "주제 및 내용",
@@ -320,8 +320,8 @@
         lbl_format: "Format",
         val_format: "4 Tech Talks + Networking (Break 20m + Mixer 70m)",
         reg_title: "Attendee Registration",
-        reg_desc: "Registration opens on Monday, Nov 2 via Google Forms. Attendees will be selected based on application review (not first-come, first-served), with confirmation emails sent on Nov 22.",
-        reg_btn: "forms.gle [Opens Nov 2]",
+        reg_desc: "Registration is open via Google Forms. Attendees will be selected based on application review (not first-come, first-served), with confirmation emails sent before Sunday, Nov 22.",
+        reg_btn: "Open Google Form →",
         sec_schedule: "Presentation Sessions & Timetable",
         th_speaker: "Time & Speaker",
         th_topic: "Topic & Details",
@@ -391,8 +391,8 @@
       const formBtn = document.getElementById('google-form-btn');
       if (edition.registrationFormUrl) {
         formBtn.removeAttribute('disabled');
-        formBtn.className = "px-4 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-white font-mono text-xs cursor-pointer text-center shrink-0 transition-colors";
-        formBtn.onclick = () => window.open(edition.registrationFormUrl, '_blank');
+        formBtn.href = edition.registrationFormUrl;
+        formBtn.className = "px-4 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-white font-mono text-xs cursor-pointer text-center shrink-0 transition-colors inline-block";
         formBtn.innerText = lang === 'ko' ? "Google Form 등록 바로가기 →" : "Open Google Form →";
       }
     }
