@@ -14,7 +14,7 @@
 - **장소 (Venue)**: [OpenUP (오픈UP 소프트웨어센터, 서울)](https://www.oss.kr/pages/5) *(확정)*
 - **진행 언어 (Language)**: 한국어 (Korean) - 모든 발표 및 진행은 한국어로 진행됩니다
 - **규모 (Scale)**: 오프라인 약 50명
-- **참가 신청 (Registration)**: [Google Forms 신청 바로가기](https://forms.gle/otDyaN6zYH6v1Nyq8) (신청 내용 검토 후 11월 22일(일) 전 최종 확정 메일 발송 / 참가비 무료)
+- **참가 신청 (Registration)**: [Google Forms 신청 바로가기](https://forms.gle/otDyaN6zYH6v1Nyq8) (Google Form 등록 후 1~2일 내 확정 메일 발송 / 참가비 무료)
 
 ---
 

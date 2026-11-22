@@ -35,11 +35,11 @@ window.MEETUPS_DATA = [
         en: "4 Tech Talks + Networking (Break 20m + Mixer 70m)"
       }
     },
-    // Registration schedule: confirmation emails sent before Nov 22 based on application review
+    // Registration schedule: confirmation emails sent within 1-2 days
     registration: {
       openDate: "2026-11-02",
-      confirmDate: "before 2026-11-22",
-      type: "review" // Application review (not first-come, first-served)
+      confirmDate: "within 1-2 days",
+      type: "rolling"
     },
     // Google Form application link
     registrationFormUrl: "https://forms.gle/otDyaN6zYH6v1Nyq8",
